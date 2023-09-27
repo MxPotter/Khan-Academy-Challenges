@@ -1,0 +1,29 @@
+/** Mimicing code for a favorite app **/
+
+CREATE TABLE finch_ly (id INTEGER PRIMARY KEY, user_id INTEGER, username TEXT, mood INTEGER, finch TEXT, goal TEXT);
+
+INSERT INTO finch_ly VALUES (1, 1, "Missy", 3, "Sonic Screwdriver", "Create robot army for The Doctor");
+
+INSERT INTO finch_ly VALUES (2, 2, "The Doctor", 4, "Donna", "Keep an eye out for Missy");
+
+INSERT INTO  finch_ly VALUES (3, 2, "The Doctor", 4, "Donna", "Keep Donna out of trouble");
+
+INSERT INTO finch_ly VALUES (4, 3, "Rose", 3, "Bad Wolf", "Watch out for The Doctor");
+
+INSERT INTO finch_ly VALUES (5, 3, "Rose", 3, "Bad Wolf", "Warn The Doctor about the Daleks");
+
+INSERT INTO finch_ly VALUES (6, 4, "T.A.R.D.I.S.", 5, "The Doctor", "Take The Doctor and Donna on a wild adventure where they're needed");
+
+INSERT INTO finch_ly VALUES (7, 4, "T.A.R.D.I.S.", 5, "The Doctor", "Save the universe from certain destruction");
+
+SELECT * FROM finch_ly;
+
+UPDATE finch_ly
+SET mood = 3
+WHERE id = 3;
+SELECT * FROM finch_ly;
+
+ALTER TABLE finch_ly ADD date_time INTEGER;
+
+INSERT INTO finch_ly VALUES (8, 2, "The Doctor", 5, "Donna", "Get Donna out of here alive, fix the timeline", "23-08-0079 08:25");
+SELECT * FROM finch_ly;
