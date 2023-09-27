@@ -1,0 +1,19 @@
+/** Grocery List:
+Bananas (4)
+Peanut Butter (1)
+Dark Chocolate (2)
+**/
+
+CREATE TABLE Groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, Aisle INTEGER);
+INSERT INTO Groceries VALUES (1, "Bananas", 4, 7);
+INSERT INTO Groceries VALUES (2, "Peanut Butter", 1, 2);
+INSERT INTO Groceries VALUES (3, "Dark Chocolate Bars", 2, 2);
+INSERT INTO Groceries VALUES (4, "Ice Cream", 1, 12);
+INSERT INTO Groceries VALUES (5, "Cherries", 6, 2);
+INSERT INTO Groceries VALUES (6, "Chocolate Syrup", 1, 4);
+SELECT Name FROM Groceries;
+SELECT * FROM Groceries;
+SELECT * FROM Groceries ORDER BY Aisle;
+SELECT * FROM Groceries WHERE Aisle > 5 ORDER BY Aisle;
+SELECT SUM(Quantity) FROM Groceries;
+SELECT Aisle, SUM(Quantity) FROM Groceries GROUP BY Aisle;
